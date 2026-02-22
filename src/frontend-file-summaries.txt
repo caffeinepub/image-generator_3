@@ -1,0 +1,8 @@
+{
+  "frontend/src/App.tsx": "Main application component with header, ImageGenerator component, and footer layout",
+  "frontend/src/components/ImageGenerator.tsx": "Core image generation component with prompt input, generate button, loading states, and image display functionality using React Query",
+  "frontend/src/components/Footer.tsx": "Footer component with copyright, attribution, and caffeine.ai link with UTM tracking",
+  "frontend/src/hooks/useQueries.ts": "React Query hook for calling the backend generateImage function with proper error handling",
+  "frontend/src/index.css": "Global styles with warm earth tone color palette (terracotta, cream, vibrant green) using OKLCH color system for light and dark modes",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with custom color tokens and Inter font family"
+}

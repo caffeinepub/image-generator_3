@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Image generation application with backend placeholder",
+  "architectural_notes": [
+    "Backend uses JavaScript for image generation (non-standard for ICP)",
+    "Image generation returns placeholder URL format"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-frontend-interface-that-allows-users-to-input-a-text-prompt-call-the-backend-generateimage-function-and-display-the-returned-image-url",
+      "title": "Create a frontend interface that allows users to input a text prompt, call the backend generateImage function, and display the returned image URL",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-creative-and-cohesive-visual-design-theme-to-the-application-with-a-distinct-style-using-harmonious-colors-avoid-blue-and-purple-readable-typography-and-clean-layout-patterns-that-enhance-the-image-generation-experience",
+      "title": "Apply a creative and cohesive visual design theme to the application with a distinct style using harmonious colors (avoid blue and purple), readable typography, and clean layout patterns that enhance the image generation experience",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Backend image generation endpoint returning placeholder",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Create a backend function in main.mo that accepts a text prompt and returns a structured response containing an imageUrl field with the placeholder URL 'https://placehold.co/1024x1536?text=Backend+OK'",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Image Generator",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

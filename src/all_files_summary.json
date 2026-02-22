@@ -1,0 +1,17 @@
+{
+  "backend/main.mo": "Motoko actor defining a generateImage function that accepts a text prompt and returns a placeholder image URL.",
+  "feature_evidence.json": "Feature evidence report documenting two implemented features: frontend interface for image generation and creative visual design theme with warm earth tones.",
+  "frontend-file-summaries.txt": "JSON summary of frontend files describing the React app structure, image generator component, styling with warm earth tones, and backend integration hooks.",
+  "frontend/index.css": "Tailwind CSS configuration with grayscale OKLCH color variables for light and dark modes, using neutral tones without the custom warm palette.",
+  "frontend/index.html": "HTML entry point with root div and module script loading main.tsx.",
+  "frontend/src/App.tsx": "Main React component rendering a sticky header with branding, ImageGenerator component in main content, and Footer.",
+  "frontend/src/components/Footer.tsx": "Footer component displaying copyright, attribution, and caffeine.ai link with UTM tracking parameters.",
+  "frontend/src/components/ImageGenerator.tsx": "Image generation UI with textarea prompt input, generate button with loading states, error handling, and display card for generated images.",
+  "frontend/src/hooks/useActor.ts": "React Query hook managing ICP actor creation with Internet Identity authentication, handling anonymous and authenticated states.",
+  "frontend/src/hooks/useInternetIdentity.ts": "React context provider and hook for Internet Identity authentication using @dfinity/auth-client with login, logout, and identity state management.",
+  "frontend/src/hooks/useQueries.ts": "React Query mutation hook wrapping the backend generateImage actor call with error handling.",
+  "frontend/src/index.css": "Tailwind CSS with custom OKLCH color system defining warm earth tones (terracotta primary, cream secondary, vibrant green accent) for light and dark modes.",
+  "frontend/src/main.tsx": "React application entry point setting up QueryClient, InternetIdentityProvider, and rendering the App component.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration file that defines custom color schemes using OKLCH color space, extends theme with custom colors (primary, secondary, sidebar, chart, etc.), border radius variables, custom fonts (Inter), and accordion animations. Includes typography, container queries, and animate plugins.",
+  "project_state.json": "Project state tracking file for an image generation application showing completed frontend features (text prompt input, backend call, image display) and pending backend implementation that currently returns placeholder URLs. Notes architectural concern about using JavaScript for image generation on ICP."
+}
