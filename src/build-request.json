@@ -1,69 +1,35 @@
 {
   "kind": "build_request",
-  "title": "Add backend image generation endpoint",
-  "projectName": "Image Generator",
+  "title": "Add Replicate API token constant",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-1",
-      "text": "Create a backend function in main.mo that accepts a text prompt and returns a structured response containing an imageUrl field with the placeholder URL 'https://placehold.co/1024x1536?text=Backend+OK'",
+      "id": "REQ-4",
+      "text": "Add a constant named 'token' with the value 'HIER_DEIN_TOKEN' to the backend main.mo file for storing the Replicate API authentication token",
       "target": "backend",
       "source": {
         "messageIds": [
-          "msg-3"
+          "msg-latest"
         ],
         "quotes": [
-          "export async function generateImage(prompt) { return { imageUrl: \"https://placehold.co/1024x1536?text=Backend+OK\" }; }"
+          "const token = \"HIER_DEIN_TOKEN\";"
         ]
       },
       "acceptanceCriteria": [
-        "Backend exposes a public query or update function named generateImage that accepts a Text parameter",
-        "Function returns a record type with an imageUrl field containing the exact URL: https://placehold.co/1024x1536?text=Backend+OK",
-        "Function can be called from the frontend with a prompt string"
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "text": "Create a frontend interface that allows users to input a text prompt, call the backend generateImage function, and display the returned image URL",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-3"
-        ]
-      },
-      "acceptanceCriteria": [
-        "UI includes a text input field for entering prompts",
-        "UI includes a button to trigger image generation",
-        "Generated image URL is displayed as an actual image on the page",
-        "Uses React Query for backend communication"
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "text": "Apply a creative and cohesive visual design theme to the application with a distinct style using harmonious colors (avoid blue and purple), readable typography, and clean layout patterns that enhance the image generation experience",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-3"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Consistent color palette applied throughout the UI",
-        "Typography choices support readability and visual hierarchy",
-        "Layout provides clear visual flow for the prompt-to-image workflow"
+        "A constant or variable named 'token' exists in backend/main.mo",
+        "The token value is set to 'HIER_DEIN_TOKEN'",
+        "The constant is accessible for use in the generateImage function or other backend logic"
       ]
     }
   ],
   "constraints": [
-    "Backend must use Motoko, not JavaScript",
-    "All backend logic must reside in the single main actor (backend/main.mo)",
-    "Frontend must use React with TypeScript, Tailwind CSS, and React Query"
+    "Maintain single-actor architecture in main.mo",
+    "Do not modify frontend files"
   ],
   "nonGoals": [
-    "Actual AI image generation (using placeholder URL only)",
-    "Image storage or persistence",
-    "User authentication",
-    "Image editing capabilities"
+    "Implementing actual Replicate API integration",
+    "Adding error handling for token validation",
+    "Creating token configuration management"
   ],
   "imageRequirements": {
     "required": [],

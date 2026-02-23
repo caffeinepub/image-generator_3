@@ -1,4 +1,6 @@
 actor {
+  let token = "HIER_DEIN_TOKEN";
+
   type GenerateImageResponse = {
     imageUrl : Text;
   };

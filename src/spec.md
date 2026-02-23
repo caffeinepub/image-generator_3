@@ -1,12 +1,9 @@
 # Specification
 
 ## Summary
-**Goal:** Create a simple image generation interface with a backend endpoint that returns a placeholder image URL based on user prompts.
+**Goal:** Add a Replicate API token constant to the backend for authentication purposes.
 
 **Planned changes:**
-- Add a backend `generateImage` function in main.mo that accepts a text prompt and returns a record with an `imageUrl` field containing the placeholder URL `https://placehold.co/1024x1536?text=Backend+OK`
-- Build a frontend interface with a text input field and generate button that calls the backend function
-- Display the returned image URL as an actual image on the page
-- Apply a creative visual design theme with harmonious colors (avoiding blue and purple), readable typography, and clean layout
+- Add a constant named 'token' with the value 'HIER_DEIN_TOKEN' to backend/main.mo
 
-**User-visible outcome:** Users can enter a text prompt, click a generate button, and see a placeholder image displayed on the page, demonstrating the end-to-end workflow of prompt submission and image display.
+**User-visible outcome:** No user-facing changes; this is a backend configuration change that prepares the application for Replicate API integration.

@@ -1,50 +1,6 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Add backend image generation endpoint",
-  "requirements": [
-    {
-      "id": "REQ-2",
-      "summary": "Create a frontend interface for text prompt input, backend image generation call, and image display",
-      "acceptanceCriteria": [
-        "UI includes a text input field for entering prompts",
-        "UI includes a button to trigger image generation",
-        "Generated image URL is displayed as an actual image on the page",
-        "Uses React Query for backend communication"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/ImageGenerator.tsx",
-          "operation": "create",
-          "description": "Create a React component that provides a text input field for prompts, a button to trigger image generation, and displays the returned image. Use React Query (useMutation or useQuery) to call the backend generateImage function from backend.d.ts. Display the imageUrl returned in the GenerateImageResponse as an <img> element. Include loading and error states."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render the ImageGenerator component in the main App component to make the image generation interface accessible to users."
-        }
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "summary": "Apply a creative and cohesive visual design theme with harmonious colors (avoid blue and purple), readable typography, and clean layout",
-      "acceptanceCriteria": [
-        "Consistent color palette applied throughout the UI",
-        "Typography choices support readability and visual hierarchy",
-        "Layout provides clear visual flow for the prompt-to-image workflow"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/index.css",
-          "operation": "modify",
-          "description": "Update global CSS to define a creative and cohesive color palette avoiding blue and purple (e.g., warm tones, earth tones, or vibrant greens/oranges). Set typography rules for readability and visual hierarchy. Ensure the design enhances the image generation experience with clean layout patterns."
-        },
-        {
-          "path": "frontend/tailwind.config.js",
-          "operation": "modify",
-          "description": "Extend the Tailwind configuration to include the new color palette and typography theme. Define custom colors, font families, and spacing tokens to support the creative design theme across the application."
-        }
-      ]
-    }
-  ]
+  "title": "Add Replicate API token constant",
+  "requirements": []
 }

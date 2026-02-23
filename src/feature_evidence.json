@@ -1,43 +1,4 @@
 {
   "kind": "feature_evidence_report",
-  "features": [
-    {
-      "featureId": "feature-create-a-frontend-interface-that-allows-users-to-input-a-text-prompt-call-the-backend-generateimage-function-and-display-the-returned-image-url",
-      "featureTitle": "Create a frontend interface that allows users to input a text prompt, call the backend generateImage function, and display the returned image URL",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/ImageGenerator.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-2"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-apply-a-creative-and-cohesive-visual-design-theme-to-the-application-with-a-distinct-style-using-harmonious-colors-avoid-blue-and-purple-readable-typography-and-clean-layout-patterns-that-enhance-the-image-generation-experience",
-      "featureTitle": "Apply a creative and cohesive visual design theme to the application with a distinct style using harmonious colors (avoid blue and purple), readable typography, and clean layout patterns that enhance the image generation experience",
-      "files": [
-        "frontend/src/index.css",
-        "frontend/tailwind.config.js"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-3"
-      ],
-      "confidence": "high"
-    }
-  ]
+  "features": []
 }
