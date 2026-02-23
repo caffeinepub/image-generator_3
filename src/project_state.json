@@ -1,56 +1,28 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 5,
-  "summary": "Image generation application with backend placeholder",
+  "projectStateVersion": 3,
+  "summary": "Image generation app using Hugging Face API with Stable Diffusion model",
   "architectural_notes": [
-    "Backend uses JavaScript for image generation (non-standard for ICP)",
-    "Image generation returns placeholder URL format"
+    "Backend uses Motoko actor with HTTP outcalls to Hugging Face API",
+    "Integrates runwayml/stable-diffusion-v1-5 model for image generation",
+    "Returns base64-encoded images as data URLs"
   ],
-  "known_issues": [],
-  "isFixRequest": false,
-  "existing_features": [
-    {
-      "id": "feature-create-a-frontend-interface-that-allows-users-to-input-a-text-prompt-call-the-backend-generateimage-function-and-display-the-returned-image-url",
-      "title": "Create a frontend interface that allows users to input a text prompt, call the backend generateImage function, and display the returned image URL",
-      "reqIds": [
-        "REQ-2"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-apply-a-creative-and-cohesive-visual-design-theme-to-the-application-with-a-distinct-style-using-harmonious-colors-avoid-blue-and-purple-readable-typography-and-clean-layout-patterns-that-enhance-the-image-generation-experience",
-      "title": "Apply a creative and cohesive visual design theme to the application with a distinct style using harmonious colors (avoid blue and purple), readable typography, and clean layout patterns that enhance the image generation experience",
-      "reqIds": [
-        "REQ-3"
-      ],
-      "version": 1
-    }
+  "known_issues": [
+    "Previous backend changes did not persist after rebuild"
   ],
+  "isFixRequest": true,
+  "existing_features": [],
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "Backend image generation endpoint returning placeholder",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-2",
-      "summary": "Create a backend function in main.mo that accepts a text prompt and returns a structured response containing an imageUrl field with the placeholder URL 'https://placehold.co/1024x1536?text=Backend+OK'",
+      "summary": "Replace the entire contents of backend/main.mo with the provided Motoko code that implements HTTP outcalls to the Hugging Face Stable Diffusion v1.5 API (https://api-inference.huggingface.co/models/runwayml/stable-diffusion-v1-5), including imports for Http, Text, Blob, and Base64 modules, a GenerateImageResponse type definition, and a generateImage function that accepts a prompt, makes a POST request with JSON body containing the prompt, encodes the response body as base64, and returns a data URL with the base64-encoded image",
       "reqIds": [
         "REQ-1"
       ],
       "status": "pending"
-    },
-    {
-      "id": "AR-3",
-      "summary": "Add a constant named 'token' with the value 'HIER_DEIN_TOKEN' to the backend main.mo file for storing the Replicate API authentication token",
-      "reqIds": [
-        "REQ-4"
-      ],
-      "status": "pending"
     }
   ],
-  "projectName": "Image Generator",
+  "projectName": "Replace backend main.mo with Hugging Face image generation implementation",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

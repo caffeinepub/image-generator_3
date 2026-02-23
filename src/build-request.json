@@ -1,35 +1,36 @@
 {
   "kind": "build_request",
-  "title": "Add Replicate API token constant",
-  "priority": "normal",
+  "title": "Replace backend main.mo with Hugging Face image generation implementation",
+  "priority": "high",
   "requirements": [
     {
-      "id": "REQ-4",
-      "text": "Add a constant named 'token' with the value 'HIER_DEIN_TOKEN' to the backend main.mo file for storing the Replicate API authentication token",
+      "id": "REQ-1",
+      "text": "Replace the entire contents of backend/main.mo with the provided Motoko code that implements HTTP outcalls to the Hugging Face Stable Diffusion v1.5 API (https://api-inference.huggingface.co/models/runwayml/stable-diffusion-v1-5), including imports for Http, Text, Blob, and Base64 modules, a GenerateImageResponse type definition, and a generateImage function that accepts a prompt, makes a POST request with JSON body containing the prompt, encodes the response body as base64, and returns a data URL with the base64-encoded image",
       "target": "backend",
       "source": {
         "messageIds": [
-          "msg-latest"
+          "msg-5"
         ],
         "quotes": [
-          "const token = \"HIER_DEIN_TOKEN\";"
+          "i need to change in /backen/main.io, the script with my script: import Http \"mo:base/Http\"; import Text \"mo:base/Text\"; import Blob \"mo:base/Blob\"; import Base64 \"mo:base/Base64\"; actor { type GenerateImageResponse = { imageUrl : Text; }; public shared func generateImage(prompt : Text) : async GenerateImageResponse { let body = Text.encodeUtf8( \"{ \\\"inputs\\\": \\\"\" # prompt # \"\\\" }\" ); let request : Http.Request = { url = \"https://api-inference.huggingface.co/models/runwayml/stable-diffusion-v1-5\"; method = #post; headers = [ (\"Content-Type\", \"application/json\") ]; body = body; max_response_bytes = ?5_000_000; transform = null; }; let response = await Http.request(request); let base64 = Base64.encode(response.body); { imageUrl = \"data:image/png;base64,\" # base64; }; }; };"
         ]
       },
       "acceptanceCriteria": [
-        "A constant or variable named 'token' exists in backend/main.mo",
-        "The token value is set to 'HIER_DEIN_TOKEN'",
-        "The constant is accessible for use in the generateImage function or other backend logic"
+        "backend/main.mo contains exactly the code provided by the user with no modifications",
+        "The generateImage function makes HTTP POST requests to the Hugging Face Stable Diffusion v1.5 API endpoint",
+        "Generated images are returned as base64-encoded data URLs with the format 'data:image/png;base64,[encoded_data]'",
+        "The max_response_bytes is set to 5,000,000 to accommodate image responses"
       ]
     }
   ],
   "constraints": [
-    "Maintain single-actor architecture in main.mo",
-    "Do not modify frontend files"
+    "Do not modify the user's provided backend code in any way",
+    "Ensure the exact API endpoint URL https://api-inference.huggingface.co/models/runwayml/stable-diffusion-v1-5 is preserved"
   ],
   "nonGoals": [
-    "Implementing actual Replicate API integration",
-    "Adding error handling for token validation",
-    "Creating token configuration management"
+    "Adding authentication headers for the Hugging Face API",
+    "Modifying the frontend to handle the new response format",
+    "Adding error handling or retry logic to the backend function"
   ],
   "imageRequirements": {
     "required": [],

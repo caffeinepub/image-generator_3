@@ -1,6 +1,6 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Add Replicate API token constant",
+  "title": "Replace backend main.mo with Hugging Face image generation implementation",
   "requirements": []
 }

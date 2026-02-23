@@ -1,3 +1,5 @@
+import OutCall "http-outcalls/outcall";
+
 actor {
   let token = "HIER_DEIN_TOKEN";
 

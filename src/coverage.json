@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-22T16:58:15.699Z",
+  "generatedAt": "2026-02-23T18:38:22.255Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -11,8 +11,8 @@
     "implemented": 0,
     "items": [
       {
-        "id": "REQ-4",
-        "summary": "Add a constant named 'token' with the value 'HIER_DEIN_TOKEN' to the backend main.mo file for storing the Replicate API authentication token",
+        "id": "REQ-1",
+        "summary": "Replace the entire contents of backend/main.mo with the provided Motoko code that implements HTTP outcalls to the Hugging Face Stable Diffusion v1.5 API (https://api-inference.huggingface.co/models/runwayml/stable-diffusion-v1-5), including imports for Http, Text, Blob, and Base64 modules, a GenerateImageResponse type definition, and a generateImage function that accepts a prompt, makes a POST request with JSON body containing the prompt, encodes the response body as base64, and returns a data URL with the base64-encoded image",
         "status": "unknown",
         "plannedFiles": [],
         "matchedFiles": []
@@ -20,9 +20,7 @@
     ]
   },
   "changedFiles": [
-    "backend/main.mo",
     "build-request.json",
-    "build-template/README.md",
     "feature_evidence.json",
     "frontend-implementation-plan.json",
     "frontend/src/backend.d.ts",
